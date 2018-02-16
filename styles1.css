@@ -1,0 +1,78 @@
+body
+{
+    background-color: #D3D3D3;
+
+}
+
+h1
+{
+    color: #222469;
+    font-family: 'Poiret One', sans-serif;
+    font-size: 60px;
+    text-align: center
+}
+
+h2
+{
+    color: #262875;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+    text-align: center
+}
+
+h3
+{
+    color: #262875;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 40px;
+    text-align: center
+}
+
+hr
+{
+    background-color: #3A3EB5;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #3A3EB5;
+    padding: 0;
+}
+
+.mainrule
+{
+  background-color: #3A3EB5;
+  display: block;
+  height: 3px;
+  border: 0;
+  border-top: 3px solid #3A3EB5;
+  padding: 0;
+
+}
+
+.exchange
+{
+  color: #3A3EB5;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20px;
+  text-align: center
+
+}
+
+form {
+  /* Just to center the form on the page */
+  margin: 0 auto;
+  width: 400px;
+  /* To see the outline of the form */
+  padding: 1em;
+  border: 2px solid #4F54F5;
+  border-radius: 1em;
+  color: #191B4F;
+}
+
+div {
+    text-align: center;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
