@@ -11,8 +11,12 @@ $(document).ready(function() {
         dataType : "json",
         success : function(json) {
         console.log(json);
+        console.log(value);
+        var realresults = value * json.value * .01;
+        console.log(realresults);
         var results = "";
         results += '<h2>' + json.text + "</h2>";
+        realresults = "<h2>" + value + " dollars is equivalent to " + realresults.toPrecision(4) + " euros</h2>";
         /*for (var i=0; i<json.weather.length; i++) {
              results += '<img src="http://openweathermap.org/img/w/' + json.weather[i].icon + '.png"/>';
          }
@@ -24,7 +28,8 @@ $(document).ready(function() {
             results += ", "
           }
           results += "</p>";*/
-          $("#dollarResults").html(results);
+          $("#dollarResults").html(realresults);
+          //console.log(results);
 
         }
     });
