@@ -31,21 +31,18 @@ var app = new Vue({
     inputvalue: '',
     exchange: '',
     finalresults: '',
-    //results: {},
-    //number: 0,
 
-  }
-  methods:{
+  },
+  methods: {
     inputDollars:function()
     {
-      this.exchange = json.value;
-      this.finalresults = this.inputvalue * this.exchange * .01;
-      consol.log(finalresults);
-      return finalresults;
-      //Vue.set(app.results, this.number, new Array);
-      //this.results[this.number].push({euros: this.finalresults});
-      //this.number = this.number +1;
-      //this.inputvalue: '';
+      fetch('https://forex.1forge.com/1.0.3/convert?from=USD&to=EUR&quantity=100&api_key=gcxJa9CzXHalcOPPMY31oJ6u9Egl772k').then(response => {
+	return response.json();
+      }).then(json => {
+	this.exchange = json.value;
+  this.finalresults = this.inputvalue + " dollars is equivalent to " + (this.inputvalue * this.exchange * .01).toPrecision(4) + " euros";
+  return this.finalresults;
+      })
     }
   }
 })

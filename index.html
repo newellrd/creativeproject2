@@ -5,12 +5,9 @@
     <link rel="stylesheet" href="styles1.css">
   </head>
   <body>
-
+    <div id ="app">
     <h1>Currency Conversion</h1>
     <hr class="mainrule">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script text="type/javascript" src="script.js">
-    </script>
 
 
     <p class="exchange">
@@ -25,15 +22,21 @@
       <input v-model="inputvalue" placeholder=""></p>
       <button type="submit">Submit</button>
     </form>
-    <div v-for="finalresults in results[number]">
-      <p>{{results.finalresults}}</p>
+    <div >
+      <p>{{finalresults}}</p>
     </div>
 
-
-  </body>
-
+  </div>
   <div class="footer">
     <p><a href="https://github.com/newellrd/creativeproject2">
     GitHub Repository</a></p>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script text="type/javascript" src="script.js">
+  </script>
+  </body>
+
+
 </html>
