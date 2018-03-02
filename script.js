@@ -1,4 +1,4 @@
-$(document).ready(function() {
+/*$(document).ready(function() {
 
   $("#dollarSubmit").click(function(e) {
     e.preventDefault();
@@ -17,21 +17,35 @@ $(document).ready(function() {
         var results = "";
         results += '<h2>' + json.text + "</h2>";
         realresults = "<h2>" + value + " dollars is equivalent to " + realresults.toPrecision(4) + " euros</h2>";
-        /*for (var i=0; i<json.weather.length; i++) {
-             results += '<img src="http://openweathermap.org/img/w/' + json.weather[i].icon + '.png"/>';
-         }
-         results += '<h2>' + json.main.temp + " &deg;F</h2>"
-         results += "<p>"
-         for (var i=0; i<json.weather.length; i++) {
-            results += json.weather[i].description
-            if (i !== json.weather.length - 1)
-            results += ", "
-          }
-          results += "</p>";*/
           $("#dollarResults").html(realresults);
           //console.log(results);
 
         }
     });
   });
-});
+});*/
+
+var app = new Vue({
+  el: '#app',
+  data:{
+    inputvalue: '',
+    exchange: '',
+    finalresults: '',
+    //results: {},
+    //number: 0,
+
+  }
+  methods:{
+    inputDollars:function()
+    {
+      this.exchange = json.value;
+      this.finalresults = this.inputvalue * this.exchange * .01;
+      consol.log(finalresults);
+      return finalresults;
+      //Vue.set(app.results, this.number, new Array);
+      //this.results[this.number].push({euros: this.finalresults});
+      //this.number = this.number +1;
+      //this.inputvalue: '';
+    }
+  }
+})
